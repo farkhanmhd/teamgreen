@@ -1,7 +1,9 @@
+import HeroSection from "./ui/components/HeroSection";
+
 export default function Home() {
   return (
-    <main className="h-screen w-screen">
-      <h1>Hello World</h1>
+    <main className="px-[30px] lg:px-[50px] xl:px-[70px]">
+      <HeroSection />
     </main>
   );
 }

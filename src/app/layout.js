@@ -1,5 +1,6 @@
 import "./globals.css";
 import localFont from "next/font/local";
+import Header from "./ui/components/Header";
 
 const helveticaNeue = localFont({
   src: [
@@ -24,7 +25,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={helveticaNeue.className}>{children}</body>
+      <body className={`${helveticaNeue.className} antialiased`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
