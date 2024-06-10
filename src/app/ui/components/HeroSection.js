@@ -33,8 +33,8 @@ const HeroSection = () => {
       });
   });
   return (
-    <section className="z-10 flex h-[100dvh] w-full flex-col gap-y-8 pt-[110px] font-medium lg:gap-y-0 lg:pt-0 xl:flex-row xl:items-center xl:justify-between">
-      <div className="flex w-full overflow-hidden lg:h-[60%] xl:order-2 xl:h-auto xl:max-w-[456px]">
+    <section className="flex h-[100dvh] w-full flex-col gap-y-8 bg-transparent pt-[110px] font-medium mix-blend-difference lg:gap-y-0 lg:pt-0 xl:flex-row xl:items-center xl:justify-between">
+      <div className="flex w-full overflow-hidden invert-[1] lg:h-[60%] xl:order-2 xl:h-auto xl:max-w-[456px]">
         <Image
           id="hero-image"
           src="/hero.png"
