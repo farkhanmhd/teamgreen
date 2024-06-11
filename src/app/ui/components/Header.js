@@ -20,7 +20,7 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="fixed left-0 top-0 flex h-[110px] w-screen items-center justify-between bg-transparent px-[30px] mix-blend-difference lg:px-[50px] xl:px-[70px]"
+      className="fixed left-0 top-0 z-[999] flex h-[110px] w-screen items-center justify-between bg-transparent px-[30px] mix-blend-difference lg:px-[50px] xl:px-[70px]"
     >
       <Link href="/" className="group text-sm font-medium text-white">
         TeamGreen

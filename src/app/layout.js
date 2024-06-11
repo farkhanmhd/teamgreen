@@ -1,5 +1,8 @@
 import './globals.css';
 import localFont from 'next/font/local';
+import { Provider } from 'jotai';
+import ScrollSmooth from './ui/components/ScrollSmooth';
+import Cursor from './ui/components/Cursor';
 
 const helveticaNeue = localFont({
   src: [
@@ -25,7 +28,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${helveticaNeue.className} antialiased`}>
-        {children}
+        <Provider>
+          <ScrollSmooth>
+            <Cursor />
+            {children}
+          </ScrollSmooth>
+        </Provider>
       </body>
     </html>
   );

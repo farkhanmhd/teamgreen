@@ -2,7 +2,7 @@
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import SplitLetter from './SplitLetter';
+import SplitLetter from '../components/SplitLetter';
 
 const ContextSection = () => {
   useGSAP(() => {
@@ -19,7 +19,10 @@ const ContextSection = () => {
   });
 
   return (
-    <section className="py-[110px]" id="context">
+    <section
+      className="px-[30px] py-[110px] lg:px-[50px] xl:px-[70px]"
+      id="context"
+    >
       <p className="mx-auto flex w-full flex-wrap gap-x-1.5 text-lg font-medium leading-tight text-zinc-400 lg:gap-x-6 lg:text-5xl xl:w-9/12">
         <SplitLetter className="context-letter">
           Choosing sustainability is essential for our planet’s health. We can

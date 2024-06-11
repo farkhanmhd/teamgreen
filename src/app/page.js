@@ -1,11 +1,13 @@
-import HeroSection from './ui/components/HeroSection';
-import ContextSection from './ui/components/ContextSection';
+import HeroSection from './ui/sections/HeroSection';
+import ContextSection from './ui/sections/ContextSection';
+import SolutionSection from './ui/sections/SolutionSection';
 
 export default function Home() {
   return (
-    <main className="bg-white px-[30px] lg:px-[50px] xl:px-[70px]">
+    <main className="h-[20000px] bg-white">
       <HeroSection />
       <ContextSection />
+      <SolutionSection />
     </main>
   );
 }
