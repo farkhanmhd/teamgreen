@@ -27,7 +27,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${helveticaNeue.className} antialiased`}>
+      <body className={`${helveticaNeue.className} cursor-none antialiased`}>
         <Provider>
           <ScrollSmooth>
             <Cursor />

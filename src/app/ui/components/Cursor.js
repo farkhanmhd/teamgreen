@@ -7,8 +7,8 @@ const Cursor = () => {
   useGSAP(() => {
     document.addEventListener('mousemove', (e) => {
       gsap.to('#cursor', {
-        x: e.clientX,
-        y: e.clientY,
+        x: e.clientX - 10,
+        y: e.clientY - 10,
       });
     });
   });

@@ -1,5 +1,6 @@
 'use client';
 
+import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import SolutionItem from './SolutionItem';
@@ -7,6 +8,8 @@ import { solutions } from '@/app/utils/data';
 import { isMobile, isTablet, isDesktop } from '@/app/utils/utils';
 
 const SolutionItemsContainer = () => {
+  const listRef = useRef(null);
+
   useGSAP(() => {
     const timeline = gsap.timeline({
       defaults: {
@@ -17,12 +20,15 @@ const SolutionItemsContainer = () => {
     });
 
     if (isDesktop) {
+      const translateValue =
+        listRef.current.clientWidth / 6 - listRef.current.clientWidth - 140;
+      console.log(translateValue);
       gsap.to('#solution-list', {
-        xPercent: -85,
+        x: `${translateValue}px`,
         scrollTrigger: {
           trigger: '#solution',
           start: 'top top',
-          end: '+=5000',
+          end: '+=6000',
           pin: true,
           scrub: 1,
         },
@@ -71,8 +77,9 @@ const SolutionItemsContainer = () => {
   });
   return (
     <ul
-      className="flex w-full flex-col gap-y-[200px] mix-blend-difference xl:h-[100dvh] xl:w-[600vw] xl:flex-row xl:items-center xl:gap-x-[140px] xl:gap-y-0"
+      className="flex w-full flex-col gap-y-[200px] xl:h-[100dvh] xl:w-[600vw] xl:flex-row xl:items-center xl:gap-x-[140px] xl:gap-y-0"
       id="solution-list"
+      ref={listRef}
     >
       {solutions.map((solution, index) => (
         <SolutionItem key={index} {...solution} />
