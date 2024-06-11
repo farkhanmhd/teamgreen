@@ -11,7 +11,7 @@ const SolutionItem = ({
 }) => {
   return (
     <li className="w-full" id={id}>
-      <figure className="flex w-full flex-col gap-y-[23px] xl:flex-row xl:gap-x-[200px]">
+      <figure className="flex w-full flex-col gap-y-[23px] xl:flex-row xl:justify-between xl:gap-x-[200px]">
         <div
           className={`${imageFirst ? 'order-1' : 'order-2'} max-h-[456px] w-full max-w-[456px] xl:w-1/2`}
         >
