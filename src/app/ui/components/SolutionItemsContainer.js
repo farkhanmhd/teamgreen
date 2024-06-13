@@ -12,7 +12,7 @@ const SolutionItemsContainer = () => {
   useGSAP(() => {
     const listItem = gsap.utils.toArray('#solution-list li');
 
-    if (isDesktop()) {
+    if (isDesktop) {
       const translateValue =
         listRef.current.clientWidth / 6 - listRef.current.clientWidth - 140;
 

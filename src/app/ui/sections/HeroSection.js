@@ -18,19 +18,33 @@ const HeroSection = () => {
       },
     });
 
-    timeline
-      .from('.hero-title', {
-        yPercent: -100,
-        delay: isFirstLoad && 3.5,
-      })
-      .from('.hero-subtitle', {
-        yPercent: -100,
-      })
-      .from('#hero-image', {
-        opacity: 0,
-        yPercent: isDesktop() ? 0 : -100,
-        xPercent: isDesktop() ? 100 : 0,
-      });
+    if (isDesktop) {
+      timeline
+        .from('.hero-title', {
+          yPercent: -100,
+          delay: isFirstLoad && 3.5,
+        })
+        .from('.hero-subtitle', {
+          yPercent: -100,
+        })
+        .from('#hero-image', {
+          opacity: 0,
+          xPercent: 100,
+        });
+    } else {
+      timeline
+        .from('#hero-image', {
+          opacity: 0,
+          yPercent: -100,
+          delay: isFirstLoad && 3.5,
+        })
+        .from('.hero-title', {
+          yPercent: -100,
+        })
+        .from('.hero-subtitle', {
+          yPercent: -100,
+        });
+    }
   });
   return (
     <section className="flex h-[100dvh] w-full flex-col justify-center gap-y-8 bg-transparent px-[30px] pt-[110px] font-medium lg:gap-y-0 lg:px-[50px] lg:pt-0 xl:flex-row xl:items-center xl:justify-between xl:px-[70px]">

@@ -15,12 +15,12 @@ const SolutionItem = ({
   id,
 }) => {
   useGSAP(() => {
-    if (!isDesktop()) {
+    if (!isDesktop) {
       const timeline = gsap.timeline({
         stagger: 0.1,
         scrollTrigger: {
           trigger: `#${id}`,
-          start: isDesktop() ? 'top center' : 'top 60%',
+          start: isDesktop ? 'top center' : 'top 60%',
         },
       });
       if (id === `solution-1`) {
