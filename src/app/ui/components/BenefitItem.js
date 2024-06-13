@@ -30,7 +30,7 @@ const BenefitItem = ({ id, title, subtitle, image }) => {
       className="flex flex-col gap-y-[40px] lg:flex-row lg:justify-between"
     >
       <div
-        className={`flex flex-col lg:w-[59%] lg:justify-between xl:py-[40px] ${id === 'benefit-2' && 'lg:order-2'}`}
+        className={`flex flex-col lg:w-[59%] lg:justify-evenly lg:py-[40px] ${id === 'benefit-2' && 'lg:order-2'}`}
       >
         <div className="mb-5 overflow-hidden">
           <h3
@@ -46,7 +46,7 @@ const BenefitItem = ({ id, title, subtitle, image }) => {
         </div>
       </div>
       <figure
-        className={`h-full w-full max-w-[456px] pr-[30px] lg:mr-[40px] lg:w-4/12 lg:self-center ${id === 'benefit-2' && 'lg:order-1'}`}
+        className={`h-full w-full max-w-[456px] pr-[30px] lg:w-[41%] lg:self-center ${id === 'benefit-2' && 'lg:order-1'}`}
       >
         <Image
           src={image}
