@@ -22,7 +22,7 @@ const Intro = () => {
       .to('#intro-logo', {
         duration: 2,
         scale: isMobile ? 400 : 1000,
-        xPercent: isMobile ? 7000 : 100000,
+        xPercent: isMobile ? 7000 : 5500,
       });
     setTimeout(() => {
       setFirstLoad(false);
