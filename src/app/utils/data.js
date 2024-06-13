@@ -62,3 +62,27 @@ export const solutions = [
     id: 'solution-6',
   },
 ];
+
+export const benefits = [
+  {
+    id: 'benefit-1',
+    title: 'Streamlined Waste Management',
+    subtitle:
+      'Digital tools simplify sorting and disposal, leading to more efficient recycling and waste reduction efforts.',
+    image: '/images/benefit1.png',
+  },
+  {
+    id: 'benefit-2',
+    title: 'Boosted Eco-Innovation',
+    subtitle:
+      'The adoption of digital solutions spurs creativity, leading to innovative products and services that prioritize the environment.',
+    image: '/images/benefit2.png',
+  },
+  {
+    id: 'benefit-3',
+    title: 'Global Connectivity',
+    subtitle:
+      'Online platforms unite people worldwide, sharing best practices and collaborating on international sustainability projects.',
+    image: '/images/benefit3.png',
+  },
+];

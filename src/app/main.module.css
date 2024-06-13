@@ -1,0 +1,10 @@
+/* safari */
+.hideScrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* chromium based */
+.hideScrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: 0;
+}

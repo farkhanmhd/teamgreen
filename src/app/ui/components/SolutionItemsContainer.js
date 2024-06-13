@@ -5,79 +5,72 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import SolutionItem from './SolutionItem';
 import { solutions } from '@/app/utils/data';
-import { isMobile, isTablet, isDesktop } from '@/app/utils/utils';
+import { isDesktop } from '@/app/utils/utils';
 
 const SolutionItemsContainer = () => {
   const listRef = useRef(null);
-
   useGSAP(() => {
-    const timeline = gsap.timeline({
-      defaults: {
-        duration: 0.5,
-        ease: 'power2.inOut',
-        delay: isDesktop ? 0 : 0.2,
-      },
-    });
+    const listItem = gsap.utils.toArray('#solution-list li');
 
-    if (isDesktop) {
+    if (isDesktop()) {
       const translateValue =
         listRef.current.clientWidth / 6 - listRef.current.clientWidth - 140;
-      console.log(translateValue);
-      gsap.to('#solution-list', {
+
+      let scrollTween = gsap.to('#solution-list', {
         x: `${translateValue}px`,
+        ease: 'none',
+        stagger: 0.5,
         scrollTrigger: {
-          trigger: '#solution',
+          trigger: '#solution-list',
           start: 'top top',
           end: '+=6000',
           pin: true,
           scrub: 1,
         },
       });
-    }
 
-    for (let i = 1; i <= 6; i++) {
-      if (isMobile() || isTablet()) {
-        gsap.from(`#solution`, {
-          scrollTrigger: {
-            trigger: `#solution-${i}`,
-            onEnter: () => {
-              i === 1
-                ? timeline
-                    .from(`#solution-${i} h3`, { yPercent: -100 })
-                    .from(`#solution-${i} p`, { yPercent: -100 })
-                    .from(`#solution-${i} img`, { opacity: 0 })
-                : timeline
-                    .from(`#solution-${i} img`, { opacity: 0 })
-                    .from(`#solution-${i} h3`, { yPercent: -100 })
-                    .from(`#solution-${i} p`, { yPercent: -100 });
+      listItem.forEach((list, index) => {
+        if (index >= 1) {
+          let image = list.querySelectorAll('.anim-image');
+          let title = list.querySelectorAll('.anim-title');
+          let description = list.querySelectorAll('.anim-description');
+
+          gsap.from(image, {
+            opacity: 0,
+            stagger: 0.5,
+            scrollTrigger: {
+              trigger: image,
+              containerAnimation: scrollTween,
+              start: 'left center',
             },
-            scrub: 1,
-          },
-        });
-      } else {
-        gsap.from(`#solution`, {
-          scrollTrigger: {
-            trigger: `#solution`,
-            onEnter: () => {
-              i === 1
-                ? timeline
-                    .from(`#solution-${i} h3`, { yPercent: -100, delay: 0.5 })
-                    .from(`#solution-${i} p`, { yPercent: -100 })
-                    .from(`#solution-${i} img`, { opacity: 0 })
-                : timeline
-                    .from(`#solution-${i} img`, { opacity: 0, delay: 0.5 })
-                    .from(`#solution-${i} h3`, { yPercent: -100 })
-                    .from(`#solution-${i} p`, { yPercent: -100 });
+          });
+          gsap.from(title, {
+            yPercent: -100,
+            delay: 0.5,
+            stagger: 0.5,
+            scrollTrigger: {
+              trigger: image,
+              containerAnimation: scrollTween,
+              start: 'left center',
             },
-            scrub: 1,
-          },
-        });
-      }
+          });
+          gsap.from(description, {
+            yPercent: -100,
+            delay: 1,
+            stagger: 0.5,
+            scrollTrigger: {
+              trigger: image,
+              containerAnimation: scrollTween,
+              start: 'left center',
+            },
+          });
+        }
+      });
     }
   });
   return (
     <ul
-      className="flex w-full flex-col gap-y-[200px] xl:h-[100dvh] xl:w-[600vw] xl:flex-row xl:items-center xl:gap-x-[140px] xl:gap-y-0"
+      className="] flex w-full flex-col gap-y-[200px] xl:h-[100dvh] xl:w-[600vw] xl:flex-row xl:items-center xl:gap-x-[140px] xl:gap-y-0"
       id="solution-list"
       ref={listRef}
     >

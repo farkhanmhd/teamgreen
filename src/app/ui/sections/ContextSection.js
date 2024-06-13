@@ -3,9 +3,11 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import SplitLetter from '../components/SplitLetter';
+import ScrollTrigger from 'gsap/src/ScrollTrigger';
 
 const ContextSection = () => {
   useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
     gsap.to('.context-letter', {
       color: 'black',
       stagger: 0.05,

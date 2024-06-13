@@ -1,0 +1,63 @@
+'use client';
+
+import gsap from 'gsap';
+import { useGSAP } from '@gsap/react';
+import Image from 'next/image';
+
+const BenefitItem = ({ id, title, subtitle, image }) => {
+  useGSAP(() => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: `#${id}`,
+        start: 'top 60%',
+      },
+    });
+    timeline
+      .from(`#${id} h3`, {
+        yPercent: -100,
+      })
+      .from(`#${id} p`, {
+        yPercent: -100,
+      })
+      .from(`#${id} img`, {
+        opacity: 0,
+      });
+  });
+
+  return (
+    <li
+      id={id}
+      className="flex flex-col gap-y-[40px] lg:flex-row lg:justify-between"
+    >
+      <div
+        className={`flex flex-col lg:w-[59%] lg:justify-between xl:py-[40px] ${id === 'benefit-2' && 'lg:order-2'}`}
+      >
+        <div className="mb-5 overflow-hidden">
+          <h3
+            className={`text-xl leading-tight lg:text-2xl xl:text-4xl ${id === 'benefit-2' && 'xl:text-right'}`}
+          >
+            {title}
+          </h3>
+        </div>
+        <div className="overflow-hidden">
+          <p className={`lg:text-md ${id === 'benefit-2' && 'lg:text-right'}`}>
+            {subtitle}
+          </p>
+        </div>
+      </div>
+      <figure
+        className={`h-full w-full max-w-[456px] pr-[30px] lg:mr-[40px] lg:w-4/12 lg:self-center ${id === 'benefit-2' && 'lg:order-1'}`}
+      >
+        <Image
+          src={image}
+          alt="benefit"
+          width={456}
+          height={456}
+          className="w-full object-contain"
+        />
+      </figure>
+    </li>
+  );
+};
+
+export default BenefitItem;

@@ -3,6 +3,7 @@ import localFont from 'next/font/local';
 import { Provider } from 'jotai';
 import ScrollSmooth from './ui/components/ScrollSmooth';
 import Cursor from './ui/components/Cursor';
+import styles from './main.module.css';
 
 const helveticaNeue = localFont({
   src: [
@@ -27,7 +28,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${helveticaNeue.className} cursor-none antialiased`}>
+      <body
+        className={`${helveticaNeue.className} ${styles.hideScrollbar} cursor-none antialiased xl:overflow-hidden`}
+      >
         <Provider>
           <ScrollSmooth>
             <Cursor />
