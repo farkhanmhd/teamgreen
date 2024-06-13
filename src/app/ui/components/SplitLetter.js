@@ -6,10 +6,7 @@ const SplitLetter = ({ children, className }) => {
         .map((word, i) => (
           <span key={i}>
             {word.split('').map((letter, j) => (
-              <span
-                key={j}
-                className={`${className} about-letter text-gray-300`}
-              >
+              <span key={j} className={`${className} about-letter`}>
                 {letter}
               </span>
             ))}

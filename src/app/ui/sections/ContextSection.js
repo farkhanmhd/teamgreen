@@ -26,7 +26,7 @@ const ContextSection = () => {
       id="context"
     >
       <p className="mx-auto flex w-full flex-wrap gap-x-1.5 text-lg font-medium leading-tight text-zinc-400 lg:gap-x-6 lg:text-5xl xl:w-9/12">
-        <SplitLetter className="context-letter">
+        <SplitLetter className="context-letter text-gray-300">
           Choosing sustainability is essential for our planet’s health. We can
           make a difference by using renewable resources, saving water, and
           reducing waste, leading to a greener future. Advancements in

@@ -7,8 +7,8 @@ const Cursor = () => {
   useGSAP(() => {
     document.addEventListener('mousemove', (e) => {
       gsap.to('#cursor', {
-        x: e.clientX - 10,
-        y: e.clientY - 10,
+        x: e.clientX,
+        y: e.clientY,
       });
     });
   });
@@ -16,7 +16,7 @@ const Cursor = () => {
   return (
     <div
       id="cursor"
-      className="fixed z-[999] hidden h-6 w-6 rounded-full bg-white mix-blend-difference lg:block"
+      className="fixed z-[999] h-6 w-6 rounded-full bg-white mix-blend-difference lg:block"
     />
   );
 };

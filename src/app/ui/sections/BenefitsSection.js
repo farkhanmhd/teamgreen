@@ -27,11 +27,11 @@ const BenefitsSection = () => {
   });
 
   return (
-    <section className="px-[30px] py-[110px] font-medium lg:px-[50px] xl:px-[70px]">
+    <section className="px-[30px] py-[110px] lg:px-[50px] xl:px-[70px]">
       <div className="mb-[80px]">
         <div className="overflow-hidden">
           <h1
-            className="mb-7 text-2xl leading-tight lg:text-4xl xl:text-5xl"
+            className="mb-7 text-2xl font-medium leading-tight lg:text-4xl xl:text-5xl"
             ref={titleRef}
           >
             The Impactful Benefits

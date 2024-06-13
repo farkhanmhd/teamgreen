@@ -50,7 +50,7 @@ const HeroSection = () => {
             Discover the Sustainable Path to a Cleaner Planet
           </SplitWord>
         </h1>
-        <p className="flex flex-wrap gap-x-1.5 lg:text-base">
+        <p className="flex flex-wrap gap-x-1.5 font-normal lg:text-base">
           <SplitWord className="hero-subtitle">
             Embracing Eco-Friendly Innovations for Future Generations
           </SplitWord>

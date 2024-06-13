@@ -92,7 +92,9 @@ const SolutionItem = ({
             </h3>
           </div>
           <div className="overflow-hidden">
-            <p className="anim-description text-xxs lg:text-md">{subtitle}</p>
+            <p className="anim-description text-xxs font-normal lg:text-md">
+              {subtitle}
+            </p>
           </div>
         </figcaption>
       </figure>
