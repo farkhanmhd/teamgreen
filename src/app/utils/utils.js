@@ -3,3 +3,11 @@ export const isMobile =
 
 export const isDesktop =
   typeof window !== 'undefined' && window.innerWidth >= 1280;
+
+export const isPageScrolling = () => {
+  return window.scrollY > 0;
+};
+
+export const isPageStopScrolling = () => {
+  return window.scrollY === 0;
+};

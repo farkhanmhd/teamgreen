@@ -16,7 +16,7 @@ const Cursor = () => {
   return (
     <div
       id="cursor"
-      className="fixed z-[999] h-6 w-6 rounded-full bg-white mix-blend-difference lg:block"
+      className="fixed z-[1000] h-6 w-6 rounded-full bg-white mix-blend-difference lg:block"
     />
   );
 };
