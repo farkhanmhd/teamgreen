@@ -10,7 +10,7 @@ export default function Template({ children }) {
   const isFirstLoad = useAtomValue(firstLoadAtom);
   return (
     <>
-      {/* {isFirstLoad && <Intro />} */}
+      {isFirstLoad && <Intro />}
       <Header />
       {children}
       <Footer />
