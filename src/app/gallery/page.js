@@ -29,7 +29,7 @@ const GalleryPage = () => {
   return (
     <main className="h-[100dvh] bg-white px-[30px] pb-[50px] pt-[70px] lg:px-[50px] xl:px-[70px]">
       <section className="h-full">
-        <h1 className="mb-5 h-[5%] text-sm font-medium">Gallery</h1>
+        <h1 className="mb-5 h-[5%] text-sm font-medium lg:text-lg">Gallery</h1>
         <ul className="flex h-[95%] flex-col overflow-hidden xl:flex-row">
           {galleryData.map((image, index) => (
             <GalleryImage key={index} {...image} />
