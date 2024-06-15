@@ -36,7 +36,7 @@ const HeroSection = () => {
         .from('#hero-image', {
           opacity: 0,
           yPercent: -100,
-          delay: isFirstLoad && 3.5,
+          delay: isFirstLoad && 3,
         })
         .from('.hero-title', {
           yPercent: -100,
