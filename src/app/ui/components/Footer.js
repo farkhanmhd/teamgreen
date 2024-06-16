@@ -45,7 +45,7 @@ const Footer = () => {
         </h1>
         <Link
           href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-          className="footer-button z-[999] block cursor-none rounded-[18px] border-2 border-white bg-black px-8 py-2 text-xs text-white opacity-0 mix-blend-difference duration-200 hover:bg-white hover:text-black"
+          className="footer-button block cursor-none rounded-[18px] border-2 border-white bg-black px-8 py-2 text-xs text-white opacity-0 mix-blend-difference duration-200 hover:bg-white hover:text-black"
           target="_blank"
         >
           Join now

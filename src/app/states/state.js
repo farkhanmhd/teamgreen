@@ -1,4 +1,4 @@
-import { atom } from "jotai";
+import { atom } from 'jotai';
 
 export const firstLoadAtom = atom(true);
-export const navbarAtom = atom(false);
+export const sidebarAtom = atom(false);

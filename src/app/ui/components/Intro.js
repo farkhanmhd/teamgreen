@@ -31,7 +31,7 @@ const Intro = () => {
   return (
     <div
       id="intro"
-      className="fixed left-0 top-0 z-[999] flex h-[100dvh] w-screen bg-black"
+      className="fixed left-0 top-0 z-[1001] flex h-[100dvh] w-screen bg-black"
     >
       <h1
         id="intro-logo"

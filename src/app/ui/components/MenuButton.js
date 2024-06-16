@@ -1,8 +1,19 @@
+import { useAtom } from 'jotai';
+import { sidebarAtom } from '@/app/states/state';
+
 const MenuButton = () => {
+  const [sidebarOpen, setSidebarOpen] = useAtom(sidebarAtom);
   return (
-    <button className="flex h-[12px] cursor-none flex-col justify-between">
-      <div className="h-0.5 w-[30px] bg-black"></div>
-      <div className="h-0.5 w-[30px] bg-black"></div>
+    <button
+      className="flex h-[12px] cursor-none flex-col justify-between"
+      onClick={() => setSidebarOpen(!sidebarOpen)}
+    >
+      <div
+        className={`h-0.5 w-[30px] origin-left bg-white duration-200 ${sidebarOpen && '-translate-y-[9px] rotate-45'}`}
+      ></div>
+      <div
+        className={`h-0.5 w-[30px] origin-left bg-white duration-200 ${sidebarOpen && 'translate-y-[2px] -rotate-45'}`}
+      ></div>
     </button>
   );
 };

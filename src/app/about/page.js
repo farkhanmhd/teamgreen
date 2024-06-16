@@ -6,7 +6,6 @@ import { useState } from 'react';
 import Image from 'next/image';
 import { useAtomValue } from 'jotai';
 import { firstLoadAtom } from '@/app/states/state';
-import SplitWord from '../ui/components/SplitWord';
 
 const AboutPage = () => {
   const isFirstLoad = useAtomValue(firstLoadAtom);
@@ -43,9 +42,9 @@ const AboutPage = () => {
 
   return (
     <main className="h-[100dvh] bg-white px-[30px] pb-[50px] pt-[110px] lg:px-[50px] xl:px-[70px]">
-      <div className="mx-auto flex h-full w-full flex-col gap-[50px] lg:w-11/12 lg:flex-row">
+      <div className="mx-auto flex h-full w-full flex-col gap-[50px] lg:w-11/12 xl:flex-row">
         <div
-          className="h-1/2 w-full overflow-hidden rounded-lg lg:h-full lg:w-1/2"
+          className="h-1/2 w-full overflow-hidden rounded-lg lg:h-full xl:w-1/2"
           id="about-img"
         >
           <Image
@@ -56,7 +55,7 @@ const AboutPage = () => {
             className="h-full w-full object-cover"
           />
         </div>
-        <div className="flex h-1/2 w-full flex-col justify-between lg:h-full lg:w-1/2">
+        <div className="flex h-1/2 w-full flex-col justify-between lg:h-full xl:w-1/2">
           <div className="overflow-hidden">
             <p className="overflow-hidden lg:text-lg" id="about-quote">
               {data === 1
@@ -70,7 +69,7 @@ const AboutPage = () => {
           <div className="flex items-center justify-between">
             <div>
               <div className="overflow-hidden">
-                <p className="text-sm font-medium lg:text-2xl" id="about-name">
+                <p className="text-xs font-medium lg:text-2xl" id="about-name">
                   {data === 1 ? 'Farkhan Muhammad' : 'Farid Ashyqi'}
                 </p>
               </div>
