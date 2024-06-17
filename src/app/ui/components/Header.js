@@ -10,7 +10,6 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 const Header = () => {
   const isFirstLoad = useAtomValue(firstLoadAtom);
-  console.log(isFirstLoad);
   const sidebarOpen = useAtomValue(sidebarAtom);
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);

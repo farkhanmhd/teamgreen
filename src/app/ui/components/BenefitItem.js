@@ -1,10 +1,13 @@
 'use client';
 
+import { useAtomValue } from 'jotai';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { darkModeAtom } from '@/app/states/state';
 import Image from 'next/image';
 
 const BenefitItem = ({ id, title, subtitle, image }) => {
+  const darkMode = useAtomValue(darkModeAtom);
   useGSAP(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
@@ -53,7 +56,7 @@ const BenefitItem = ({ id, title, subtitle, image }) => {
           alt="benefit"
           width={456}
           height={456}
-          className="w-full object-contain"
+          className={`w-full object-contain ${darkMode && 'invert'}`}
         />
       </figure>
     </li>

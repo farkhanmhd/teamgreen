@@ -36,7 +36,7 @@ const Footer = () => {
   });
 
   return (
-    <footer className="h-[100dvh] bg-white px-[30px] pt-[110px] font-medium lg:px-[50px] xl:px-[70px]">
+    <footer className="h-[100dvh] bg-white px-[30px] pt-[110px] font-medium duration-200 lg:px-[50px] xl:px-[70px] dark:bg-black dark:text-white">
       <div className="flex h-[calc(100%-110px)] flex-col items-center justify-center gap-y-[50px]">
         <h1 className="overflow-hidden text-center text-lg leading-tight md:text-xl lg:text-5xl">
           <SplitWord className="footer-title mr-3 lg:mr-6">

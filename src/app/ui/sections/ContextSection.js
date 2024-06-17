@@ -1,15 +1,18 @@
 'use client';
 
 import gsap from 'gsap';
+import { useAtomValue } from 'jotai';
+import { darkModeAtom } from '@/app/states/state';
 import { useGSAP } from '@gsap/react';
 import SplitLetter from '../components/SplitLetter';
 import ScrollTrigger from 'gsap/src/ScrollTrigger';
 
 const ContextSection = () => {
+  const darkMode = useAtomValue(darkModeAtom);
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to('.context-letter', {
-      color: 'black',
+      color: darkMode ? 'white' : 'black',
       stagger: 0.05,
       scrollTrigger: {
         trigger: '#context',
@@ -18,15 +21,15 @@ const ContextSection = () => {
         scrub: 1,
       },
     });
-  });
+  }, [darkMode]);
 
   return (
     <section
-      className="px-[30px] py-[110px] lg:px-[50px] xl:px-[70px]"
+      className="px-[30px] py-[110px] duration-200 lg:px-[50px] xl:px-[70px] dark:bg-black dark:text-white"
       id="context"
     >
       <p className="mx-auto flex w-full flex-wrap gap-x-1.5 text-lg font-medium leading-tight text-zinc-400 lg:gap-x-6 lg:text-5xl xl:w-9/12">
-        <SplitLetter className="context-letter text-gray-300">
+        <SplitLetter className="context-letter">
           Choosing sustainability is essential for our planet’s health. We can
           make a difference by using renewable resources, saving water, and
           reducing waste, leading to a greener future. Advancements in

@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${helveticaNeue.className} ${styles.hideScrollbar} cursor-none antialiased xl:overflow-hidden`}
+        className={`${helveticaNeue.className} ${styles.hideScrollbar} cursor-none antialiased xl:overflow-hidden dark:bg-black dark:text-white`}
       >
         <Provider>
           <ScrollSmooth>

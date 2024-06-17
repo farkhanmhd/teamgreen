@@ -3,13 +3,14 @@
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { useAtomValue } from 'jotai';
-import { firstLoadAtom } from '@/app/states/state';
+import { firstLoadAtom, darkModeAtom } from '@/app/states/state';
 import Image from 'next/image';
 import SplitWord from '../components/SplitWord';
 import { isDesktop } from '@/app/utils/utils';
 
 const HeroSection = () => {
   const isFirstLoad = useAtomValue(firstLoadAtom);
+  const darkMode = useAtomValue(darkModeAtom);
   useGSAP(() => {
     const timeline = gsap.timeline({
       defaults: {
@@ -47,7 +48,7 @@ const HeroSection = () => {
     }
   });
   return (
-    <section className="flex h-[100dvh] w-full flex-col justify-center gap-y-8 bg-transparent px-[30px] pt-[110px] font-medium lg:gap-y-0 lg:px-[50px] lg:pt-0 xl:flex-row xl:items-center xl:justify-between xl:px-[70px]">
+    <section className="flex h-[100dvh] w-full flex-col justify-center gap-y-8 bg-transparent px-[30px] pt-[110px] font-medium duration-200 lg:gap-y-0 lg:px-[50px] lg:pt-0 xl:flex-row xl:items-center xl:justify-between xl:px-[70px] dark:bg-black dark:text-white">
       <div className="flex w-full overflow-hidden lg:h-[60%] xl:order-2 xl:h-auto xl:max-w-[456px]">
         <Image
           id="hero-image"
@@ -55,7 +56,7 @@ const HeroSection = () => {
           alt="hero image"
           width={456}
           height={456}
-          className="m-auto"
+          className={`m-auto ${darkMode && 'invert'}`}
         />
       </div>
       <div className="xl:order-1 xl:max-w-[60%]">

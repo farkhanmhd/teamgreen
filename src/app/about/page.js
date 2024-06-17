@@ -41,18 +41,18 @@ const AboutPage = () => {
   });
 
   return (
-    <main className="h-[100dvh] bg-white px-[30px] pb-[50px] pt-[110px] lg:px-[50px] xl:px-[70px]">
+    <main className="h-[100dvh] bg-white px-[30px] pb-[50px] pt-[110px] lg:px-[50px] xl:px-[70px] dark:bg-black dark:text-white">
       <div className="mx-auto flex h-full w-full flex-col gap-[50px] lg:w-11/12 xl:flex-row">
         <div
           className="h-1/2 w-full overflow-hidden rounded-lg lg:h-full xl:w-1/2"
           id="about-img"
         >
           <Image
-            src="/images/about-img-1.jpg"
+            src={`/images/about-img-${data}.jpg`}
             alt="about-img-1"
             width={500}
             height={500}
-            className="h-full w-full object-cover"
+            className={`h-full w-full object-cover ${data === 2 && 'grayscale'}`}
           />
         </div>
         <div className="flex h-1/2 w-full flex-col justify-between lg:h-full xl:w-1/2">
@@ -81,7 +81,7 @@ const AboutPage = () => {
             </div>
             <div className="flex gap-x-5" id="about-button">
               <button
-                className="group flex h-[60px] w-[60px] cursor-none items-center justify-center rounded-full border-2 border-black duration-200 hover:bg-black"
+                className="group flex h-[60px] w-[60px] cursor-none items-center justify-center rounded-full border-2 border-black duration-200 hover:bg-black dark:border-white dark:hover:bg-white"
                 id="prev"
                 onClick={() => setData(data === 1 ? 2 : 1)}
               >
@@ -90,11 +90,11 @@ const AboutPage = () => {
                   alt="left"
                   width={20}
                   height={20}
-                  className="group-hover:invert"
+                  className="duration-200 group-hover:invert dark:bg-white dark:invert dark:group-hover:invert-0"
                 />
               </button>
               <button
-                className="group flex h-[60px] w-[60px] cursor-none items-center justify-center rounded-full border-2 border-black duration-200 hover:bg-black"
+                className="group flex h-[60px] w-[60px] cursor-none items-center justify-center rounded-full border-2 border-black duration-200 hover:bg-black dark:border-white dark:bg-black dark:hover:bg-white"
                 id="next"
                 onClick={() => setData(data === 1 ? 2 : 1)}
               >
@@ -103,7 +103,7 @@ const AboutPage = () => {
                   alt="left"
                   width={20}
                   height={20}
-                  className="group-hover:invert"
+                  className="duration-200 group-hover:invert dark:bg-white dark:invert dark:group-hover:invert-0"
                 />
               </button>
             </div>

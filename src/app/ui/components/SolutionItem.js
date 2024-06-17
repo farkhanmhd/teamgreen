@@ -2,6 +2,8 @@
 
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { useAtomValue } from 'jotai';
+import { darkModeAtom } from '@/app/states/state';
 import Image from 'next/image';
 import { isDesktop } from '@/app/utils/utils';
 
@@ -14,6 +16,7 @@ const SolutionItem = ({
   imageFirst,
   id,
 }) => {
+  const darkMode = useAtomValue(darkModeAtom);
   useGSAP(() => {
     if (!isDesktop) {
       const timeline = gsap.timeline({
@@ -80,7 +83,7 @@ const SolutionItem = ({
             alt="solution image"
             width={width}
             height={height}
-            className="anim-image w-full object-cover xl:m-auto"
+            className={`${darkMode ? 'invert' : ''} anim-image w-full object-cover xl:m-auto`}
           />
         </div>
         <figcaption

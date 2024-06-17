@@ -3,7 +3,7 @@ import SolutionItemsContainer from '../components/SolutionItemsContainer';
 const SolutionSection = () => {
   return (
     <section
-      className="mb-[110px] overflow-x-hidden px-[30px] font-medium lg:px-[50px] xl:px-[70px]"
+      className="overflow-x-hidden px-[30px] pb-[110px] font-medium duration-200 lg:px-[50px] xl:px-[70px] dark:bg-black dark:text-white"
       id="solution"
     >
       <SolutionItemsContainer />

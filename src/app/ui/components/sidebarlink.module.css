@@ -1,0 +1,3 @@
+.sidebarLink:hover ~ div {
+  width: 100%;
+}

@@ -27,7 +27,7 @@ const BenefitsSection = () => {
   });
 
   return (
-    <section className="px-[30px] py-[110px] lg:px-[50px] xl:px-[70px]">
+    <section className="px-[30px] py-[110px] duration-200 lg:px-[50px] xl:px-[70px] dark:bg-black dark:text-white">
       <div className="mb-[80px]">
         <div className="overflow-hidden">
           <h1
