@@ -9,10 +9,10 @@ const MenuButton = () => {
       onClick={() => setSidebarOpen(!sidebarOpen)}
     >
       <div
-        className={`h-0.5 w-[30px] origin-left duration-200 ${sidebarOpen ? '-translate-y-[9px] rotate-45 bg-white invert' : 'bg-black dark:bg-white'}`}
+        className={`h-0.5 w-[30px] origin-left duration-200 ${sidebarOpen ? '-translate-y-[9px] rotate-45 bg-white invert dark:invert-0' : 'bg-black dark:bg-white'}`}
       ></div>
       <div
-        className={`h-0.5 w-[30px] origin-left duration-200 ${sidebarOpen ? 'translate-y-[2px] -rotate-45 bg-white invert' : 'bg-black dark:bg-white'}`}
+        className={`h-0.5 w-[30px] origin-left duration-200 ${sidebarOpen ? 'translate-y-[2px] -rotate-45 bg-white invert dark:invert-0' : 'bg-black dark:bg-white'}`}
       ></div>
     </button>
   );
