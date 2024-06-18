@@ -52,7 +52,7 @@ const Header = () => {
           Team
         </span>
         <span
-          className={`text-light-green duration-200 ${sidebarOpen && 'invert dark:invert-0'}`}
+          className={`text-light-green duration-200 ${sidebarOpen && 'dark:invert-0'}`}
         >
           Green
         </span>
