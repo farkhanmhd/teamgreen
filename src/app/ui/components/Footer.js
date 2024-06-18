@@ -39,7 +39,7 @@ const Footer = () => {
     <footer className="h-[100dvh] bg-white px-[30px] pt-[110px] font-medium duration-200 lg:px-[50px] xl:px-[70px] dark:bg-black dark:text-white">
       <div className="flex h-[calc(100%-110px)] flex-col items-center justify-center gap-y-[50px]">
         <h1 className="overflow-hidden text-center text-lg leading-tight md:text-xl lg:text-5xl">
-          <SplitWord className="footer-title mr-3 lg:mr-6">
+          <SplitWord className="footer-title text-light-green mr-3 lg:mr-6">
             Join the Digital Revolution for a Greener Tomorrow
           </SplitWord>
         </h1>
@@ -54,7 +54,8 @@ const Footer = () => {
       <div className="flex flex-col justify-between gap-y-3 lg:mt-[50px] lg:flex-row">
         <div className="overflow-hidden">
           <p id="footer-copyright">
-            &copy; TeamGreen 2024 - All rights reserved
+            &copy; Team<span className="text-light-green">Green</span> 2024 -
+            All rights reserved
           </p>
         </div>
         <div className="overflow-hidden">
@@ -63,7 +64,7 @@ const Footer = () => {
             <Link
               href="https://icons8.com/license"
               target="_blank"
-              className="cursor-none"
+              className="hover:text-light-green cursor-none duration-200"
             >
               Icons8
             </Link>

@@ -31,7 +31,7 @@ const BenefitsSection = () => {
       <div className="mb-[80px]">
         <div className="overflow-hidden">
           <h1
-            className="mb-7 text-2xl font-medium leading-tight lg:text-4xl xl:text-5xl"
+            className="text-light-green mb-7 text-2xl font-medium leading-tight lg:text-4xl xl:text-5xl"
             ref={titleRef}
           >
             The Impactful Benefits

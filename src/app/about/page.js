@@ -69,7 +69,10 @@ const AboutPage = () => {
           <div className="flex items-center justify-between">
             <div>
               <div className="overflow-hidden">
-                <p className="text-xs font-medium lg:text-2xl" id="about-name">
+                <p
+                  className="text-light-green text-xs font-medium lg:text-2xl"
+                  id="about-name"
+                >
                   {data === 1 ? 'Farkhan Muhammad' : 'Farid Ashyqi'}
                 </p>
               </div>

@@ -90,7 +90,7 @@ const SolutionItem = ({
           className={`${imageFirst ? 'order-2' : 'order-1'} xl:flex xl:w-1/2 xl:flex-col xl:justify-between`}
         >
           <div className="mb-[23px] overflow-hidden">
-            <h3 className="anim-title text-xl leading-tight lg:text-4xl">
+            <h3 className="anim-title text-light-green text-xl leading-tight lg:text-4xl">
               {title}
             </h3>
           </div>

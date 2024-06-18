@@ -27,6 +27,9 @@ module.exports = {
         '5xl': '96px',
         '6xl': '128px',
       },
+      colors: {
+        'light-green': '#0C9463',
+      },
     },
   },
   plugins: [],

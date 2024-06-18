@@ -37,7 +37,7 @@ const BenefitItem = ({ id, title, subtitle, image }) => {
       >
         <div className="mb-5 overflow-hidden">
           <h3
-            className={`text-xl font-medium leading-tight lg:text-2xl xl:text-4xl ${id === 'benefit-2' && 'xl:text-right'}`}
+            className={`text-light-green text-xl font-medium leading-tight lg:text-2xl xl:text-4xl ${id === 'benefit-2' && 'xl:text-right'}`}
           >
             {title}
           </h3>

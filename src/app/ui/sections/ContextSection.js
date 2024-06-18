@@ -12,8 +12,8 @@ const ContextSection = () => {
   useGSAP(() => {
     gsap.registerPlugin(ScrollTrigger);
     gsap.to('.context-letter', {
-      color: darkMode ? 'white' : 'black',
-      stagger: 0.05,
+      color: '#0C9463',
+      stagger: 0.025,
       scrollTrigger: {
         trigger: '#context',
         start: 'top center',

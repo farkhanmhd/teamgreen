@@ -18,7 +18,7 @@ const Intro = () => {
 
     timeline
       .to('#intro-logo', { opacity: 1 })
-      .to('#green-text', { color: '#70EDDC' })
+      .to('#green-text', { color: '#0C9463' })
       .to('#intro-logo', {
         duration: 2,
         scale: isMobile ? 400 : 1000,

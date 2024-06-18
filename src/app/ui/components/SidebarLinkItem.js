@@ -12,11 +12,14 @@ const SidebarLinkItem = ({ text, href }) => {
       onClick={() => setSidebarOpen(!sidebarOpen)}
       className="group relative max-w-max"
     >
-      <Link href={href} className={`${styles.sidebarLink} cursor-none text-xl`}>
+      <Link
+        href={href}
+        className={`${styles.sidebarLink} hover:text-light-green cursor-none text-xl duration-300`}
+      >
         {text}
       </Link>
       <div
-        className={`absolute bottom-0 left-0 h-[2px] w-0 origin-left bg-white duration-300`}
+        className={`bg-light-green absolute bottom-0 left-0 h-[2px] w-0 origin-left duration-300`}
       />
     </li>
   );

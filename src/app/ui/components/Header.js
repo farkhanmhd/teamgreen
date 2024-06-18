@@ -40,13 +40,22 @@ const Header = () => {
   return (
     <header
       id="header"
-      className="fixed left-0 top-0 z-[999] flex h-[60px] w-screen items-center justify-between bg-black px-[30px] mix-blend-difference lg:px-[50px] xl:px-[70px]"
+      className="fixed left-0 top-0 z-[999] flex h-[60px] w-screen items-center justify-between px-[30px] mix-blend-difference invert lg:px-[50px] xl:px-[70px] dark:invert-0"
     >
       <Link
         href="/"
         className="group cursor-none text-sm font-medium text-white"
       >
-        TeamGreen
+        <span
+          className={`${sidebarOpen ? 'text-white invert dark:invert-0' : 'text-black'} duration-200 dark:text-white`}
+        >
+          Team
+        </span>
+        <span
+          className={`text-light-green duration-200 ${sidebarOpen && 'invert dark:invert-0'}`}
+        >
+          Green
+        </span>
       </Link>
       <MenuButton />
     </header>

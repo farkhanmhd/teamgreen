@@ -4,10 +4,7 @@ const SplitWord = ({ children, className }) => {
       {String(children)
         .split(' ')
         .map((word, index) => (
-          <span
-            key={index}
-            className="inline-block overflow-hidden text-white mix-blend-difference"
-          >
+          <span key={index} className="inline-block overflow-hidden">
             <span className={`${className} inline-block`}>{word}</span>
           </span>
         ))}

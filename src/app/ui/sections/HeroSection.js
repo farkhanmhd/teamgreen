@@ -61,7 +61,7 @@ const HeroSection = () => {
       </div>
       <div className="xl:order-1 xl:max-w-[60%]">
         <h1 className="mb-5 flex flex-wrap gap-x-3 text-md leading-tight sm:text-lg md:text-2xl lg:gap-x-6 lg:text-5xl">
-          <SplitWord className="hero-title">
+          <SplitWord className="hero-title text-light-green">
             Discover the Sustainable Path to a Cleaner Planet
           </SplitWord>
         </h1>

@@ -40,12 +40,14 @@ const Sidebar = () => {
   };
 
   useEffect(() => {
+    if (localStorage.theme === 'dark') setDarkMode(true);
+
     if (darkMode) {
       document.documentElement.classList.add('dark');
     } else {
       document.documentElement.classList.remove('dark');
     }
-  }, [darkMode]);
+  }, [darkMode, setDarkMode]);
 
   const handleTheme = () => {
     setDarkMode(!darkMode);
@@ -74,10 +76,10 @@ const Sidebar = () => {
             ))}
             <li className="group relative max-w-max">
               <button
-                className={`${styles.sidebarLink} cursor-none`}
+                className={`${styles.sidebarLink} hover:text-light-green cursor-none duration-300`}
                 onClick={handleTheme}
               >{`Switch to ${darkMode ? 'Light' : 'Dark'} Mode`}</button>
-              <div className="absolute bottom-0 left-0 h-[2px] w-0 origin-left bg-white duration-300" />
+              <div className="bg-light-green absolute bottom-0 left-0 h-[2px] w-0 origin-left duration-300" />
             </li>
           </ul>
         </div>
